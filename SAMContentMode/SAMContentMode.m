@@ -112,9 +112,9 @@ CGSize SAMSizeAspectFill(CGSize aspectRatio, CGSize minimumSize) {
 
 CGRect SAMRectAspectFit(CGSize aspectRatio, CGRect boundingRect) {
     CGSize size = SAMSizeAspectFit(aspectRatio, boundingRect.size);
-    CGPoint origin = CGPointZero;
-    origin.x = (boundingRect.size.width - size.width) / 2.0;
-    origin.y = (boundingRect.size.height - size.height) / 2.0;
+    CGPoint origin = boundingRect.origin;
+    origin.x += (boundingRect.size.width - size.width) / 2.0;
+    origin.y += (boundingRect.size.height - size.height) / 2.0;
     return (CGRect){ origin, size };
 }
 
