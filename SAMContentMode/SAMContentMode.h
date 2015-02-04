@@ -6,8 +6,11 @@
 //  Copyright (c) 2014 Sam Soffes. All rights reserved.
 //
 
+@import Foundation;
+@import CoreGraphics;
+
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-#import <UIKit/UIView.h>
+@import UIKit;
 #else
 typedef NS_ENUM(NSInteger, UIViewContentMode) {
     UIViewContentModeScaleToFill,
@@ -31,19 +34,19 @@ typedef NS_ENUM(NSInteger, UIViewContentMode) {
 
 /**
  Resize `rect` to fit in `bounds` using a given `contentMode`.
- 
+
  @param bounds The bounds containing the rect.
  @param contentMode The content mode to use.
  @param rect The rect to resize.
  @return A resized rect for the given content mode.
- 
+
  Note: UIViewContentModeRedraw returns the same value as UIViewContentModeScaleToFill.
  */
 extern CGRect SAMRectForContentMode(CGRect bounds, UIViewContentMode contentMode, CGRect rect);
 
 /**
  Resize a size to fit a given aspect ratio.
- 
+
  @param aspectRatio The aspect ratio to use.
  @param boundingSize The size to resize.
  @return A resized size to fit the aspect ratio.

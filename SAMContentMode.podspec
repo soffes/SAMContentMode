@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'SAMContentMode'
-  spec.version = '0.1.2'
+  spec.version = '0.1.3'
   spec.authors = {'Sam Soffes' => 'sam@soff.es'}
   spec.homepage = 'https://github.com/soffes/SAMContentMode'
   spec.summary = 'Content mode calculations for CGRect.'
